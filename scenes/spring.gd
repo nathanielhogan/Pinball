@@ -11,6 +11,7 @@ func _physics_process(delta: float) -> void:
 		print("hi")
 		direction.y = -2000
 		#Vector2((100 * rng.randf_range(-1, 0)), -2000)
+		translate(direction)
 		
 	pass
 

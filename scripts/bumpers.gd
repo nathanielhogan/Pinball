@@ -3,9 +3,9 @@ extends CharacterBody2D
 @onready var leftbumper = get_node("LeftBumper")
 @onready var rightbumper = get_node("RightBumper")
 @export var turnspeed = 40
-@export var target_angle_left = deg_to_rad(-15)
-@export var target_angle_right = deg_to_rad(15)
-@export var angle_offset_amount = 12
+@export var target_angle_left = deg_to_rad(-37)
+@export var target_angle_right = deg_to_rad(37)
+@export var angle_offset_amount = 37
 
 @export var starting_angle_left = deg_to_rad(angle_offset_amount)
 @export var starting_angle_right = deg_to_rad(-angle_offset_amount)
