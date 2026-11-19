@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://ktqgft2vo86g"]
+
+[ext_resource type="Texture2D" uid="uid://cslexjnjvt8ci" path="res://assets/sprites/knight.png" id="1_7s4qf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxlvu"]
+atlas = ExtResource("1_7s4qf")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7cbr"]
+atlas = ExtResource("1_7s4qf")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dx81"]
+atlas = ExtResource("1_7s4qf")
+region = Rect2(128, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eew57"]
+atlas = ExtResource("1_7s4qf")
+region = Rect2(160, 160, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ke0wg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxlvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7cbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dx81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eew57")
+}],
+"loop": 1,
+"name": &"spin",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ke0wg"]
+radius = 5.0
+
+[node name="Ball" type="Area2D" unique_id=539845962]
+position = Vector2(0, -6)
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=22354197]
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_ke0wg")
+animation = &"spin"
+autoplay = "spin"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=683122929]
+shape = SubResource("CircleShape2D_ke0wg")

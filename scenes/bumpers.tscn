@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://0ui7cqb7p84e"]
+
+[ext_resource type="Script" uid="uid://d304bsmqggr5l" path="res://scripts/bumpers.gd" id="1_m0d12"]
+[ext_resource type="Texture2D" uid="uid://dqysc4hw8twb7" path="res://assets/sprites/bumper.png" id="2_pdjm1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmdxh"]
+size = Vector2(52, 7.2628584)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ke0wg"]
+size = Vector2(51.194466, 8.86474)
+
+[node name="Bumpers" type="CharacterBody2D" unique_id=715676518]
+script = ExtResource("1_m0d12")
+
+[node name="LeftBumper" type="CharacterBody2D" parent="." unique_id=647044643]
+position = Vector2(-42, 9)
+rotation = 0.20943952
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="LeftBumper" unique_id=1333969227]
+position = Vector2(22, -18)
+texture = ExtResource("2_pdjm1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBumper" unique_id=1124071658]
+position = Vector2(20.999985, 2.4076347)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_dmdxh")
+
+[node name="RightBumper" type="CharacterBody2D" parent="." unique_id=1054518963]
+position = Vector2(70, 10.000003)
+rotation = -0.20943952
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="RightBumper" unique_id=309228128]
+position = Vector2(-22, 18)
+scale = Vector2(-1, -1)
+texture = ExtResource("2_pdjm1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightBumper" unique_id=1954892556]
+position = Vector2(-21.122265, 3.0006657)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_ke0wg")

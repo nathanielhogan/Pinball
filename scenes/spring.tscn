@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://eo18i03tdb24"]
+
+[ext_resource type="Script" uid="uid://di1vljkiqi7r1" path="res://scenes/spring.gd" id="1_6vrsj"]
+[ext_resource type="Texture2D" uid="uid://3mbns7p0yp6v" path="res://assets/sprites/world_tileset.png" id="1_61klm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mduoy"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2brh"]
+atlas = ExtResource("1_61klm")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dn4c7"]
+atlas = ExtResource("1_61klm")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vejd"]
+atlas = ExtResource("1_61klm")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ke0wg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2brh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dn4c7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vejd")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"spring",
+"speed": 5.0
+}]
+
+[node name="Spring" type="CharacterBody2D" unique_id=1284311169]
+script = ExtResource("1_6vrsj")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=910390251]
+shape = SubResource("RectangleShape2D_mduoy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=572740027]
+sprite_frames = SubResource("SpriteFrames_ke0wg")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.44772157
