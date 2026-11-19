@@ -2,6 +2,14 @@ extends CharacterBody2D
 @onready var sprite = $Sprite2D
 @onready var leftbumper = get_node("LeftBumper")
 @onready var rightbumper = get_node("RightBumper")
+@export var turnspeed = 40
+@export var target_angle_left = deg_to_rad(-15)
+@export var target_angle_right = deg_to_rad(15)
+@export var angle_offset_amount = 12
+
+@export var starting_angle_left = deg_to_rad(angle_offset_amount)
+@export var starting_angle_right = deg_to_rad(-angle_offset_amount)
+
 
 
 func _ready() -> void:
@@ -9,14 +17,34 @@ func _ready() -> void:
 
 # play animation
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("Press"):
-		for i in range(3):
-			leftbumper.rotation_degrees += -15
-			rightbumper.rotation_degrees += 15
-		await get_tree().create_timer(.1).timeout
-		for i in range(3):
-			leftbumper.rotation_degrees += 15
-			rightbumper.rotation_degrees += -15
+	var weight: float = 1.0 - exp(-turnspeed * delta)
+	if Input.is_action_pressed("ui_left"): #while left arrow pressed
+		#for i in range(3):
+			#leftbumper.rotation_degrees += -15
+			#rightbumper.rotation_degrees += 15
+		#await get_tree().create_timer(.1).timeout
+		#for i in range(3):
+			#leftbumper.rotation_degrees += 15
+			#rightbumper.rotation_degrees += -15 
+		
+		leftbumper.rotation = lerp_angle(leftbumper.rotation, target_angle_left, weight) #lerp from starting rotation to target
+	if(Input.is_action_just_released("ui_left")): #when left arrow released move back to starting position
+		leftbumper.rotation = leftbumper.rotation - angle_offset_amount
+	if Input.is_action_pressed("ui_right"):
+		rightbumper.rotation = lerp_angle(rightbumper.rotation, target_angle_right, weight)
+	if(Input.is_action_just_released("ui_right")):
+		rightbumper.rotation = rightbumper.rotation + angle_offset_amount
+	
+	#if Input.is_action_just_released("Press"):
+		##while(leftbumper.rotation != starting_angle_left):
+			##leftbumper.rotation = lerp_angle(leftbumper.rotation, starting_angle_left, weight)
+			##rightbumper.rotation = lerp_angle(rightbumper.rotation, starting_angle_right, weight)
+		#leftbumper.rotation = leftbumper.rotation + -12
+		#rightbumper.rotation = rightbumper.rotation - -12
+
+
+
+
 
 #
 ## convert current rotation into radians
