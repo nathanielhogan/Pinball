@@ -11,6 +11,11 @@ extends CharacterBody2D
 @export var starting_angle_right = deg_to_rad(-angle_offset_amount)
 
 
+######################## DOESNT WORK, IT TPS THE FLIPPERS TOO HIGH AFTER IT
+####################CONES BACK
+
+
+
 
 func _ready() -> void:
 	pass

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://eo18i03tdb24"]
 
-[ext_resource type="Script" uid="uid://di1vljkiqi7r1" path="res://scenes/spring.gd" id="1_6vrsj"]
+[ext_resource type="Script" uid="uid://di1vljkiqi7r1" path="res://scripts/spring.gd" id="1_6vrsj"]
 [ext_resource type="Texture2D" uid="uid://3mbns7p0yp6v" path="res://assets/sprites/world_tileset.png" id="1_61klm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mduoy"]
