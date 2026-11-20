@@ -1,5 +1,5 @@
-extends CharacterBody2D
-@onready var sprite = $Sprite2D
+extends Node2D
+#@onready var sprite = $Sprite2D
 @onready var leftflipper = get_node("LeftFlipper")
 @onready var rightflipper = get_node("RightFlipper")
 @export var turnspeed = 40

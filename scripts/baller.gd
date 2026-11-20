@@ -17,7 +17,7 @@ func _ready() -> void:
 
 #
 #testing velocity
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	
 	# scuffed max velocity
 	var scalar_velocity = sqrt(linear_velocity.x **2 + linear_velocity.y ** 2)

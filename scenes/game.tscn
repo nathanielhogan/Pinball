@@ -70,8 +70,8 @@ shape = SubResource("SegmentShape2D_ke0wg")
 position = Vector2(270, 565)
 shape = SubResource("SegmentShape2D_mduoy")
 
-[node name="Flippers" parent="." unique_id=715676518 instance=ExtResource("2_yqjtg")]
-position = Vector2(240, 660)
-
 [node name="Spring" parent="." unique_id=1284311169 instance=ExtResource("4_lbhrr")]
 position = Vector2(460, 600)
+
+[node name="Node2D" parent="." unique_id=950881015 instance=ExtResource("2_yqjtg")]
+position = Vector2(240, 660)
