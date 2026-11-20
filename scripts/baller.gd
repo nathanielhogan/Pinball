@@ -16,6 +16,17 @@ func _ready() -> void:
 #
 #testing velocity
 func _process(delta: float) -> void:
+	
+	# scuffed max velocity
+	var scalar_velocity = sqrt(linear_velocity.x **2 + linear_velocity.y ** 2)
+	var max_velocity = 5000
+	
+	if scalar_velocity > max_velocity:
+		linear_velocity.x = linear_velocity.x * max_velocity / scalar_velocity
+		linear_velocity.y = linear_velocity.y * max_velocity / scalar_velocity
+	
+	
+	#prints launch velocity
 	if(abs(linear_velocity.y) > 10 and temp < 1):
 		temp += 1
 		print(linear_velocity)

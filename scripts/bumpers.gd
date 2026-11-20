@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		#await get_tree().create_timer(.1).timeout
 		#for i in range(3):
 			#leftbumper.rotation_degrees += 15
-			#rightbumper.rotation_degrees += -15 
+			#rightbumper.rotation_degrees += -15
 		
 		leftbumper.rotation = lerp_angle(leftbumper.rotation, target_angle_left, weight) #lerp from starting rotation to target
 	if(Input.is_action_just_released("ui_left")): #when left arrow released move back to starting position

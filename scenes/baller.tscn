@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dxwahn0dioj61" path="res://scripts/baller.gd" id="1_l1hdp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l1hdp"]
-bounce = 0.75
+bounce = 0.7
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l1hdp"]
 atlas = ExtResource("1_7l4ne")
