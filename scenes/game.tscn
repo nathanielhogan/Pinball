@@ -12,6 +12,14 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ke0wg"]
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ke0wg"]
+a = Vector2(-147, -35)
+b = Vector2(10, 10)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mduoy"]
+a = Vector2(159, 52)
+b = Vector2(29, 93)
+
 [node name="Game" type="Node2D" unique_id=1324476600]
 script = ExtResource("1_lnu2h")
 
@@ -42,15 +50,27 @@ position = Vector2(460, 480)
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_t7ath")
 
-[node name="Abgle" type="StaticBody2D" parent="Walls" unique_id=934204355]
+[node name="Abdul" type="StaticBody2D" parent="Walls" unique_id=934204355]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Abgle" unique_id=239016476]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Abdul" unique_id=239016476]
 position = Vector2(448, 164)
 rotation = -2.3561945
 shape = SubResource("WorldBoundaryShape2D_ke0wg")
 
+[node name="LeftBottom" type="StaticBody2D" parent="Walls" unique_id=2110041077]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LeftBottom" unique_id=2006346260]
+position = Vector2(168, 647)
+shape = SubResource("SegmentShape2D_ke0wg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls" unique_id=479536384]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=1344269265]
+position = Vector2(270, 565)
+shape = SubResource("SegmentShape2D_mduoy")
+
 [node name="Flippers" parent="." unique_id=715676518 instance=ExtResource("2_yqjtg")]
-position = Vector2(206, 658)
+position = Vector2(240, 660)
 
 [node name="Spring" parent="." unique_id=1284311169 instance=ExtResource("4_lbhrr")]
 position = Vector2(440, 600)

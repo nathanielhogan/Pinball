@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cl51kvt8uhryu" path="res://assets/sprites/pinball.png" id="2_l1hdp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l1hdp"]
-bounce = 0.7
+bounce = 0.5
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ke0wg"]
 animations = [{
