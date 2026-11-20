@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bybk8bnu856g5"]
+
+[ext_resource type="Texture2D" uid="uid://dqysc4hw8twb7" path="res://assets/sprites/bumper.png" id="1_4htft"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qlsf"]
+atlas = ExtResource("1_4htft")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cf526"]
+atlas = ExtResource("1_4htft")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgqt6"]
+atlas = ExtResource("1_4htft")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_js2hc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qlsf")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cf526")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgqt6")
+}],
+"loop": 1,
+"name": &"on_hit",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_js2hc"]
+radius = 23.021729
+
+[node name="Circular_Bumper" type="RigidBody2D" unique_id=650116904]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1799511635]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_js2hc")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=266022477]
+shape = SubResource("CircleShape2D_js2hc")
