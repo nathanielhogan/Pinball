@@ -7,6 +7,8 @@ var temp = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	position.y = 585
+	position.x = 460
 	pass
 	# Set initial or direct velocity in _ready() or a function
 	#linear_velocity = Vector2((100 * rng.randf_range(-1, 0)), -2000) # For RigidBody2D
@@ -19,7 +21,7 @@ func _process(delta: float) -> void:
 	
 	# scuffed max velocity
 	var scalar_velocity = sqrt(linear_velocity.x **2 + linear_velocity.y ** 2)
-	var max_velocity = 5000
+	var max_velocity = 50000 # normal is 5000ish
 	
 	if scalar_velocity > max_velocity:
 		linear_velocity.x = linear_velocity.x * max_velocity / scalar_velocity

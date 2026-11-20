@@ -22,6 +22,7 @@ radius = 7.0
 
 [node name="Baller" type="RigidBody2D" unique_id=616429539]
 physics_material_override = SubResource("PhysicsMaterial_l1hdp")
+continuous_cd = 1
 script = ExtResource("1_l1hdp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=501771973]
@@ -30,5 +31,3 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=753318295]
 shape = SubResource("CircleShape2D_ke0wg")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
