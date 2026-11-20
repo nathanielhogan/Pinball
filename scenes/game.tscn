@@ -24,6 +24,8 @@ b = Vector2(10, 9)
 a = Vector2(173, 55)
 b = Vector2(30, 91)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lq6r6"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
 size = Vector2(134, 22)
 
@@ -73,6 +75,13 @@ shape = SubResource("SegmentShape2D_ke0wg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=1344269265]
 position = Vector2(270, 565)
 shape = SubResource("SegmentShape2D_mduoy")
+
+[node name="Ceiling" type="StaticBody2D" parent="Walls" unique_id=1562775948]
+position = Vector2(240, 0)
+rotation = 3.1415927
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Ceiling" unique_id=1411393062]
+shape = SubResource("WorldBoundaryShape2D_lq6r6")
 
 [node name="Spring" parent="." unique_id=1284311169 instance=ExtResource("4_lbhrr")]
 position = Vector2(460, 600)
