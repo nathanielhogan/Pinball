@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d3gyjgy056oqt" path="res://scenes/baller.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://0ui7cqb7p84e" path="res://scenes/flippers.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://eo18i03tdb24" path="res://scenes/spring.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://bjht37a66g358" path="res://scenes/killzone.tscn" id="5_iywne"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dr77u"]
 
@@ -17,11 +18,14 @@ b = Vector2(-140.99997, 0)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ke0wg"]
 a = Vector2(-126, -35)
-b = Vector2(9, 8)
+b = Vector2(10, 9)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_mduoy"]
 a = Vector2(173, 55)
 b = Vector2(30, 91)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
+size = Vector2(134, 22)
 
 [node name="Game" type="Node2D" unique_id=1324476600]
 script = ExtResource("1_lnu2h")
@@ -32,7 +36,7 @@ position = Vector2(460, 585)
 [node name="Walls" type="Node" parent="." unique_id=1916382964]
 
 [node name="Floor" type="StaticBody2D" parent="Walls" unique_id=1691260305]
-position = Vector2(169, 700)
+position = Vector2(169, 800)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Floor" unique_id=990460250]
 shape = SubResource("WorldBoundaryShape2D_dr77u")
@@ -73,5 +77,12 @@ shape = SubResource("SegmentShape2D_mduoy")
 [node name="Spring" parent="." unique_id=1284311169 instance=ExtResource("4_lbhrr")]
 position = Vector2(460, 600)
 
-[node name="Node2D" parent="." unique_id=950881015 instance=ExtResource("2_yqjtg")]
+[node name="Flippers" parent="." unique_id=950881015 instance=ExtResource("2_yqjtg")]
 position = Vector2(240, 660)
+
+[node name="Killzone" parent="." unique_id=2716994 instance=ExtResource("5_iywne")]
+position = Vector2(240, 690)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1885084741]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_iywne")
