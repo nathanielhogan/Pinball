@@ -1,24 +1,27 @@
 extends CharacterBody2D
 @onready var sprite = $Sprite2D
-@onready var leftbumper = get_node("LeftBumper")
-@onready var rightbumper = get_node("RightBumper")
+@onready var leftflipper = get_node("LeftFlipper")
+@onready var rightflipper = get_node("RightFlipper")
 @export var turnspeed = 40
+
 @export var target_angle_left = deg_to_rad(-37)
 @export var target_angle_right = deg_to_rad(37)
 @export var angle_offset_amount = 37
 
-@export var starting_angle_left = deg_to_rad(angle_offset_amount)
-@export var starting_angle_right = deg_to_rad(-angle_offset_amount)
+var start_angle = deg_to_rad(12)
+
+#@export var starting_angle_left = deg_to_rad(angle_offset_amount)
+#@export var starting_angle_right = deg_to_rad(-angle_offset_amount)
 
 
-######################## DOESNT WORK, IT TPS THE FLIPPERS TOO HIGH AFTER IT
-####################CONES BACK
 
 
 
 
 func _ready() -> void:
-	pass
+	leftflipper.rotation = start_angle
+	rightflipper.rotation = -start_angle
+
 
 # play animation
 func _physics_process(delta: float) -> void:
@@ -32,13 +35,15 @@ func _physics_process(delta: float) -> void:
 			#leftbumper.rotation_degrees += 15
 			#rightbumper.rotation_degrees += -15
 		
-		leftbumper.rotation = lerp_angle(leftbumper.rotation, target_angle_left, weight) #lerp from starting rotation to target
+		leftflipper.rotation = lerp_angle(leftflipper.rotation, target_angle_left, weight) #lerp from starting rotation to target
 	if(Input.is_action_just_released("ui_left")): #when left arrow released move back to starting position
-		leftbumper.rotation = leftbumper.rotation - angle_offset_amount
+		leftflipper.rotation = start_angle
+		#leftflipper.rotation = leftflipper.rotation - angle_offset_amount
 	if Input.is_action_pressed("ui_right"):
-		rightbumper.rotation = lerp_angle(rightbumper.rotation, target_angle_right, weight)
+		rightflipper.rotation = lerp_angle(rightflipper.rotation, target_angle_right, weight)
 	if(Input.is_action_just_released("ui_right")):
-		rightbumper.rotation = rightbumper.rotation + angle_offset_amount
+		rightflipper.rotation = -start_angle
+		#rightflipper.rotation = rightflipper.rotation + angle_offset_amount
 	
 	#if Input.is_action_just_released("Press"):
 		##while(leftbumper.rotation != starting_angle_left):
