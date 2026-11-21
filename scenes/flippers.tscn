@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://bli6x2mbam3td" path="res://scripts/flippers.gd" id="3_idjbk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ke0wg"]
-size = Vector2(44.139492, 8.86474)
+size = Vector2(51.67168, 11.492134)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmdxh"]
-size = Vector2(44.41996, 7.2628584)
+size = Vector2(52.673508, 9.120008)
 
 [node name="Flippers" type="Node2D" unique_id=950881015]
 script = ExtResource("3_idjbk")
@@ -24,8 +24,8 @@ scale = Vector2(-1, -1)
 texture = ExtResource("2_u7qw4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightFlipper" unique_id=1954892556]
-position = Vector2(-24.649757, 3.0006657)
-scale = Vector2(0.9999996, 0.9999996)
+position = Vector2(-20.883678, 1.6869726)
+scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_ke0wg")
 
 [node name="LeftFlipper" type="CharacterBody2D" parent="." unique_id=647044643]
@@ -38,6 +38,6 @@ position = Vector2(22, -18)
 texture = ExtResource("2_u7qw4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftFlipper" unique_id=1124071658]
-position = Vector2(24.790005, 2.4076338)
-scale = Vector2(0.9999996, 0.9999996)
+position = Vector2(20.467842, 1.4790583)
+scale = Vector2(0.99999917, 0.99999917)
 shape = SubResource("RectangleShape2D_dmdxh")

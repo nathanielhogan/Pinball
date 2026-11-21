@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://0ui7cqb7p84e" path="res://scenes/flippers.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://eo18i03tdb24" path="res://scenes/spring.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bjht37a66g358" path="res://scenes/killzone.tscn" id="5_iywne"]
+[ext_resource type="Script" uid="uid://bydkjdg8atsjt" path="res://scripts/bumperSprings.gd" id="6_p57ef"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dr77u"]
 
@@ -13,6 +14,9 @@
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_l1hdp"]
 a = Vector2(240.00002, 3.0517578e-05)
 b = Vector2(-140.99997, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3b4po"]
+distance = 2.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ke0wg"]
 
@@ -28,6 +32,9 @@ b = Vector2(30, 91)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
 size = Vector2(134, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lq6r6"]
+size = Vector2(23.229408, 6.6723633)
 
 [node name="Game" type="Node2D" unique_id=1324476600]
 script = ExtResource("1_lnu2h")
@@ -50,12 +57,20 @@ position = Vector2(40, 480)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_t7ath")
 
-[node name="RightSide" type="StaticBody2D" parent="Walls" unique_id=1435770205]
+[node name="RightSideInner" type="StaticBody2D" parent="Walls" unique_id=1435770205]
 position = Vector2(440, 480)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightSide" unique_id=637834164]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightSideInner" unique_id=637834164]
 rotation = -1.5707964
 shape = SubResource("SegmentShape2D_l1hdp")
+
+[node name="RightSideOuter" type="StaticBody2D" parent="Walls" unique_id=129760521]
+position = Vector2(481, 340)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightSideOuter" unique_id=1128611590]
+shape = SubResource("WorldBoundaryShape2D_3b4po")
+metadata/_edit_lock_ = true
 
 [node name="Abdul" type="StaticBody2D" parent="Walls" unique_id=934204355]
 
@@ -95,3 +110,50 @@ position = Vector2(240, 690)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1885084741]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_iywne")
+
+[node name="Side Bumper L" type="Node2D" parent="." unique_id=1538104555]
+position = Vector2(111, 551)
+rotation = 0.9599311
+scale = Vector2(2.5, 2.5)
+
+[node name="Edges" type="StaticBody2D" parent="Side Bumper L" unique_id=1829359918]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Side Bumper L/Edges" unique_id=1470533723]
+position = Vector2(11.385284, 3.6638641)
+shape = SubResource("RectangleShape2D_lq6r6")
+
+[node name="Spring" type="Area2D" parent="Side Bumper L" unique_id=562043560]
+position = Vector2(0.055, 0.18)
+scale = Vector2(0.995, 0.035)
+script = ExtResource("6_p57ef")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Side Bumper L/Spring" unique_id=743120055]
+position = Vector2(11.5, 3.5)
+shape = SubResource("RectangleShape2D_lq6r6")
+debug_color = Color(0, 0.64424604, 0.2906971, 0.41960785)
+
+[node name="Side Bumper R" type="Node2D" parent="." unique_id=527952927]
+position = Vector2(311, 604)
+rotation = -0.9599311
+scale = Vector2(2.5, 2.5)
+
+[node name="Edges" type="StaticBody2D" parent="Side Bumper R" unique_id=679202993]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Side Bumper R/Edges" unique_id=21280807]
+position = Vector2(11.385284, 3.6638641)
+shape = SubResource("RectangleShape2D_lq6r6")
+
+[node name="Spring" type="Area2D" parent="Side Bumper R" unique_id=1367783786]
+position = Vector2(0.055, 0.18)
+scale = Vector2(0.995, 0.035)
+script = ExtResource("6_p57ef")
+launch_direction = Vector2(-1, -1)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Side Bumper R/Spring" unique_id=1291574783]
+position = Vector2(11.5, 3.5)
+shape = SubResource("RectangleShape2D_lq6r6")
+debug_color = Color(0, 0.64424604, 0.2906971, 0.41960785)

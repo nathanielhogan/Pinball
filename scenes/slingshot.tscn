@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://xv8uum26mho3"]
+
+[ext_resource type="Script" uid="uid://bydkjdg8atsjt" path="res://scripts/bumperSprings.gd" id="1_d67ah"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fipy2"]
+size = Vector2(23.229408, 6.6723633)
+
+[node name="Slingshot" type="Node2D" unique_id=482253274]
+
+[node name="Edges" type="StaticBody2D" parent="." unique_id=891942034]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Edges" unique_id=1500761721]
+shape = SubResource("RectangleShape2D_fipy2")
+
+[node name="Spring" type="Area2D" parent="." unique_id=402515738]
+position = Vector2(0.055, 0.18)
+scale = Vector2(1, 0.035)
+script = ExtResource("1_d67ah")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spring" unique_id=1181526405]
+position = Vector2(-0.055, -99.954)
+scale = Vector2(0.9999987, 0.9999995)
+shape = SubResource("RectangleShape2D_fipy2")
+debug_color = Color(0, 0.64424604, 0.2906971, 0.41960785)
