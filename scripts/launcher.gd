@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 # feels overkill/inneficient but it works
-@onready var baller: RigidBody2D = $"../Baller"
-
+# @onready var baller: RigidBody2D = $"../Baller"
+@export var baller: Node2D
 
 var rng = RandomNumberGenerator.new()
 var mouse_hover = false
