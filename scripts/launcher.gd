@@ -31,8 +31,8 @@ func _input(event):
 			dragging = false
 			position.y = 600
 			can_move = false
-			await get_tree().create_timer(1).timeout
-			if(baller.position.x == 460):
+			await get_tree().create_timer(1.5).timeout
+			if(baller.position.x > 440):
 				print("You have to hit it harder")
 				Global.reset()
 

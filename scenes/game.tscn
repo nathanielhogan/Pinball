@@ -22,11 +22,11 @@ distance = 2.0
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ke0wg"]
 a = Vector2(-126, -35)
-b = Vector2(10, 9)
+b = Vector2(16, 9)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_mduoy"]
 a = Vector2(173, 55)
-b = Vector2(30, 91)
+b = Vector2(24, 92)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lq6r6"]
 
