@@ -111,49 +111,49 @@ position = Vector2(240, 690)
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_iywne")
 
-[node name="Side Bumper L" type="Node2D" parent="." unique_id=1538104555]
+[node name="Slingshot L" type="Node2D" parent="." unique_id=1538104555]
 position = Vector2(111, 551)
 rotation = 0.9599311
 scale = Vector2(2.5, 2.5)
 
-[node name="Edges" type="StaticBody2D" parent="Side Bumper L" unique_id=1829359918]
+[node name="Edges" type="StaticBody2D" parent="Slingshot L" unique_id=1829359918]
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Side Bumper L/Edges" unique_id=1470533723]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slingshot L/Edges" unique_id=1470533723]
 position = Vector2(11.385284, 3.6638641)
 shape = SubResource("RectangleShape2D_lq6r6")
 
-[node name="Spring" type="Area2D" parent="Side Bumper L" unique_id=562043560]
+[node name="Spring" type="Area2D" parent="Slingshot L" unique_id=562043560]
 position = Vector2(0.055, 0.18)
 scale = Vector2(0.995, 0.035)
 script = ExtResource("6_p57ef")
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Side Bumper L/Spring" unique_id=743120055]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slingshot L/Spring" unique_id=743120055]
 position = Vector2(11.5, 3.5)
 shape = SubResource("RectangleShape2D_lq6r6")
 debug_color = Color(0, 0.64424604, 0.2906971, 0.41960785)
 
-[node name="Side Bumper R" type="Node2D" parent="." unique_id=527952927]
+[node name="Slingshot R" type="Node2D" parent="." unique_id=527952927]
 position = Vector2(311, 604)
 rotation = -0.9599311
 scale = Vector2(2.5, 2.5)
 
-[node name="Edges" type="StaticBody2D" parent="Side Bumper R" unique_id=679202993]
+[node name="Edges" type="StaticBody2D" parent="Slingshot R" unique_id=679202993]
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Side Bumper R/Edges" unique_id=21280807]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slingshot R/Edges" unique_id=21280807]
 position = Vector2(11.385284, 3.6638641)
 shape = SubResource("RectangleShape2D_lq6r6")
 
-[node name="Spring" type="Area2D" parent="Side Bumper R" unique_id=1367783786]
+[node name="Spring" type="Area2D" parent="Slingshot R" unique_id=1367783786]
 position = Vector2(0.055, 0.18)
 scale = Vector2(0.995, 0.035)
 script = ExtResource("6_p57ef")
 launch_direction = Vector2(-1, -1)
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Side Bumper R/Spring" unique_id=1291574783]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slingshot R/Spring" unique_id=1291574783]
 position = Vector2(11.5, 3.5)
 shape = SubResource("RectangleShape2D_lq6r6")
 debug_color = Color(0, 0.64424604, 0.2906971, 0.41960785)
