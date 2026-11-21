@@ -7,16 +7,12 @@ extends Area2D
 
 @export var slingshot: Node2D
 
-@onready var launch_direction = Vector2.ZERO
+@onready var launch_direction: Vector2 = Vector2.from_angle(slingshot.global_rotation - PI/2)
 
 #left: pos/neg right:-/-
 
 
 func _ready() -> void:
-	if slingshot.name == "slingshot_R":
-		launch_direction = Vector2(-cos(90 - slingshot.rotation), -sin(90 - slingshot.rotation))
-	elif slingshot.name == "slingshot_L":
-		launch_direction = Vector2(cos(90 - slingshot.rotation), -sin(90 - slingshot.rotation))
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node2D) -> void:
