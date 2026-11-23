@@ -6,30 +6,18 @@ var rng = RandomNumberGenerator.new()
 var temp = 0
 var start_position = Vector2(460, 585.0453)
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-
+	
 	position = start_position
-
+	
 	pass
-	# Set initial or direct velocity in _ready() or a function
-	#linear_velocity = Vector2((100 * rng.randf_range(-1, 0)), -2000) # For RigidBody2D
 
 
-var temp1 = 0
-
-#testing velocity
 func _process(_delta: float) -> void:
-	# scuffed max velocity
-	var scalar_velocity = sqrt(linear_velocity.x **2 + linear_velocity.y ** 2)
-	var max_velocity = 50000 # normal is 5000ish
-	
-	if scalar_velocity > max_velocity:
-		linear_velocity.x = linear_velocity.x * max_velocity / scalar_velocity
-		linear_velocity.y = linear_velocity.y * max_velocity / scalar_velocity
-	
-	#if(abs(linear_velocity.y) > 0):
-		#print(position)
+	# set a maximum velocity if needed
+	max_velocity(5000)
 	
 	
 	
@@ -39,19 +27,17 @@ func _process(_delta: float) -> void:
 		print(linear_velocity)
 		can_sleep = false
 
-#func _process(_delta):
-#if Input.is_action_just_pressed("Shoot"):
-	#interact_progress_bar.value = 0
-#elif Input.is_action_pressed("Shoot"):
-	#interact_progress_bar.value += 1
-#elif Input.is_action_just_released("Shoot"):
-	#interact_progress_bar.value = 0
 
-#if interact_progress_bar.value >= 100:
-	#print("HI!")
+func max_velocity(max) -> void:
+	
+	var scalar_velocity = sqrt(linear_velocity.x **2 + linear_velocity.y ** 2)
+	
+	if scalar_velocity > max:
+		linear_velocity.x = linear_velocity.x * max / scalar_velocity
+		linear_velocity.y = linear_velocity.y * max / scalar_velocity
 
-
-	#if(linear_velocity.y < 0):
-		#linear_velocity.x = linear_velocity.x + (2 * rng.randf_range(-1, 1))
-		#
-	#print(linear_velocity.x)
+func _on_body_entered(body: Node) -> void:
+	if body.name in ["Edges"]:
+		
+		Global.score += 1
+		print(Global.score)
