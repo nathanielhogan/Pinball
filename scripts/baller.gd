@@ -20,7 +20,6 @@ func _process(_delta: float) -> void:
 	max_velocity(5000)
 	
 	
-	
 	#prints launch velocity
 	if(abs(linear_velocity.y) > 0 and temp < 1):
 		temp += 1
