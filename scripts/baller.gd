@@ -27,13 +27,13 @@ func _process(_delta: float) -> void:
 		can_sleep = false
 
 
-func max_velocity(max) -> void:
+func max_velocity(maximum) -> void:
 	
 	var scalar_velocity = sqrt(linear_velocity.x **2 + linear_velocity.y ** 2)
 	
-	if scalar_velocity > max:
-		linear_velocity.x = linear_velocity.x * max / scalar_velocity
-		linear_velocity.y = linear_velocity.y * max / scalar_velocity
+	if scalar_velocity > maximum:
+		linear_velocity.x = linear_velocity.x * maximum / scalar_velocity
+		linear_velocity.y = linear_velocity.y * maximum / scalar_velocity
 
 func _on_body_entered(body: Node) -> void:
 	if body.name in ["Edges"]:
