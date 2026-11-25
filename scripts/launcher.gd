@@ -17,7 +17,9 @@ func _ready() -> void:
 	position = starting_position
 	await get_tree().create_timer(.6).timeout
 	can_move = true
-	
+
+
+
 func _input(event):
 	if not can_move:
 		return
@@ -35,12 +37,11 @@ func _input(event):
 			if(baller.position.x > 440):
 				print("You have to hit it harder")
 				Global.reset()
-
 	if event is InputEventMouseMotion and dragging:
 		# While dragging, move the sprite with the mouse.
 		if event.position.y > 600 and event.position.y < 700:
 			position.y = event.position.y
-		
+
 
 
 
@@ -49,29 +50,3 @@ func _input(event):
 
 func _physics_process(_delta: float) -> void:
 	pass
-	
-
-
-	
-	
-	#if Input.is_action_pressed("Shoot"):
-		#
-		#position = get_global_mouse_position()
-		###print("hi")
-		###Vector2((100 * rng.randf_range(-1, 0)), -2000)
-		###translate(Vector2(0, 500 - position.y))
-		##var movespeed = 40
-		##var weight: float = 1.0 - exp(-movespeed * delta)
-###
-		##position.y = 500
-		###= lerp(600, 200, weight)
-		
-		
-		
-		
-	#pass
-
-
-	# Handle jump.
-	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		

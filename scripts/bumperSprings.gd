@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var launch_force: float = 900.0
+@export var launch_force: float = 670.0
 @export var min_random = .9
 @export var max_random = 1.1
 
