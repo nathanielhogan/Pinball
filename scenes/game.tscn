@@ -37,7 +37,7 @@ size = Vector2(134, 22)
 size = Vector2(35, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
-size = Vector2(35, 0.3)
+size = Vector2(35, 0.5)
 
 [node name="Game" type="Node2D" unique_id=1324476600]
 script = ExtResource("1_lnu2h")

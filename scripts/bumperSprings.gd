@@ -22,5 +22,6 @@ func _on_body_entered(body: Node2D) -> void:
 		#slightly randomize launch direction
 		var random_launch_direciton = Vector2(randf_range(min_random, max_random), randf_range(min_random, max_random))
 		var direction = launch_direction.normalized() * random_launch_direciton
-
+		
 		body.apply_central_impulse(direction * launch_force)
+	pass

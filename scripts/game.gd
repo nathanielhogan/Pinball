@@ -10,3 +10,11 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Reset"):
 		Global.reset()
+	
+	if Input.is_action_just_pressed("Debug"):
+		if Global.debug:
+			Global.debug = false
+			print("Debug Off!")
+		elif not Global.debug:
+			Global.debug = true
+			print("Debug On!")
