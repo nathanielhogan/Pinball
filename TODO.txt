@@ -1,0 +1,14 @@
+get outline for machine
+	trace the outline with objects
+	
+rename scripts and nodes
+
+fix collision with the slingshots
+
+fine tune gravity and max speed variables
+
+add bumpers (Owen's J*b)
+
+multiple balls ??? ammo system ?
+
+different boards ???
