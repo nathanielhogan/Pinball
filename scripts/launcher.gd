@@ -8,13 +8,14 @@ var rng = RandomNumberGenerator.new()
 var mouse_hover = false
 
 var can_move = false
-var starting_position = Vector2(460, 600)
+
+### Starting position for first level
+#460, 600
 
 var dragging = false
 var click_radius = 8 # Size of the sprite.
 
 func _ready() -> void:
-	position = starting_position
 	await get_tree().create_timer(.6).timeout
 	can_move = true
 

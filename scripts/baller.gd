@@ -4,7 +4,9 @@ var velocity = Vector2.ZERO
 var rng = RandomNumberGenerator.new()
 
 var temp = 0
-var start_position = Vector2(460, 585.0453)
+
+### STARTING POSITION FOR THE FIRST LEVEL
+#460, 585.0453
 
 
 
@@ -12,7 +14,7 @@ var start_position = Vector2(460, 585.0453)
 func _ready() -> void:
 	#turn off sleeping
 	can_sleep = true
-	position = start_position
+	
 	
 	pass
 
@@ -41,8 +43,8 @@ func _on_body_entered(body: Node) -> void:
 		
 		Global.score += 1
 		print(Global.score)
-	#print(body.name)
-	
+	#print(body.get_meta("Score"))
+		
 func _input(event):
 	if not Global.debug:
 		return

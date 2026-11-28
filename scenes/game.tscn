@@ -43,7 +43,7 @@ size = Vector2(35, 0.5)
 script = ExtResource("1_lnu2h")
 
 [node name="Baller" parent="." unique_id=616429539 instance=ExtResource("1_uwrxv")]
-position = Vector2(460, 585)
+position = Vector2(460, 585.045)
 
 [node name="Walls" type="Node" parent="." unique_id=1916382964]
 
@@ -101,7 +101,7 @@ rotation = 3.1415927
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Ceiling" unique_id=1411393062]
 shape = SubResource("WorldBoundaryShape2D_lq6r6")
 
-[node name="Spring" parent="." unique_id=1284311169 node_paths=PackedStringArray("baller") instance=ExtResource("4_lbhrr")]
+[node name="Launcher" parent="." unique_id=1284311169 node_paths=PackedStringArray("baller") instance=ExtResource("4_lbhrr")]
 position = Vector2(460, 600)
 baller = NodePath("../Baller")
 

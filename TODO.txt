@@ -12,3 +12,8 @@ add bumpers (Owen's J*b)
 multiple balls ??? ammo system ?
 
 different boards ???
+
+
+big pinball machine follow ball
+
+!!! Fix Score to be different for each collision !!!
