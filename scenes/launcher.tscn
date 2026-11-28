@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://di1vljkiqi7r1" path="res://scripts/launcher.gd" id="1_6vrsj"]
 [ext_resource type="Texture2D" uid="uid://3mbns7p0yp6v" path="res://assets/sprites/world_tileset.png" id="1_61klm"]
+[ext_resource type="Texture2D" uid="uid://c3qsdmpa1hifb" path="res://assets/sprites/springtest.png" id="2_wr5gk"]
 [ext_resource type="Texture2D" uid="uid://cl51kvt8uhryu" path="res://assets/sprites/pinball.png" id="3_cm6pl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mduoy"]
+radius = 8.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mduoy"]
 size = Vector2(16, 16)
@@ -41,14 +45,27 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_mduoy"]
-radius = 8.0
-
-[node name="Spring" type="CharacterBody2D" unique_id=1284311169]
+[node name="Launcher" type="CharacterBody2D" unique_id=1284311169]
 script = ExtResource("1_6vrsj")
 
+[node name="Spring" type="Node2D" parent="." unique_id=1649795043]
+position = Vector2(0, -120)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Spring" unique_id=1920646344]
+position = Vector2(0, 50)
+scale = Vector2(0.263, 0.333)
+texture = ExtResource("2_wr5gk")
+
+[node name="Puller" type="CollisionShape2D" parent="." unique_id=2001737338]
+shape = SubResource("CircleShape2D_mduoy")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Puller" unique_id=1433925821]
+texture = ExtResource("3_cm6pl")
+
 [node name="Head" type="CollisionShape2D" parent="." unique_id=910390251]
-position = Vector2(0, -100)
+position = Vector2(0, -120)
 shape = SubResource("RectangleShape2D_mduoy")
 metadata/_edit_group_ = true
 
@@ -57,10 +74,3 @@ sprite_frames = SubResource("SpriteFrames_ke0wg")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.44772157
-
-[node name="Puller" type="CollisionShape2D" parent="." unique_id=2001737338]
-shape = SubResource("CircleShape2D_mduoy")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Puller" unique_id=1433925821]
-texture = ExtResource("3_cm6pl")

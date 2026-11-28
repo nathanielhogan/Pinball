@@ -37,7 +37,7 @@ size = Vector2(134, 22)
 script = ExtResource("1_lnu2h")
 
 [node name="Baller" parent="." unique_id=616429539 instance=ExtResource("1_uwrxv")]
-position = Vector2(460, 505.045)
+position = Vector2(460, 485.045)
 
 [node name="Walls" type="Node" parent="." unique_id=1916382964]
 

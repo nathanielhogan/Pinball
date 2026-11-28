@@ -17,3 +17,6 @@ different boards ???
 big pinball machine follow ball
 
 !!! Fix Score to be different for each collision !!!
+
+change slingshots to be triangular and have different launch velocities
+	depending on how far from the middle the ball is
