@@ -32,7 +32,7 @@ func _input(event):
 		# Stop dragging if the button is released.
 		if dragging and not event.pressed:
 			dragging = false
-			position.y = 600
+			position.y = 620
 			can_move = false
 			await get_tree().create_timer(1.5).timeout
 			if(baller.position.x > 440):
@@ -40,7 +40,7 @@ func _input(event):
 				Global.reset()
 	if event is InputEventMouseMotion and dragging:
 		# While dragging, move the sprite with the mouse.
-		if event.position.y > 600 and event.position.y < 700:
+		if event.position.y > 620 and event.position.y < 700:
 			position.y = event.position.y
 
 

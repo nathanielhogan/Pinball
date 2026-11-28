@@ -12,7 +12,7 @@ var temp = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#turn off sleeping
+	#turn off sleeping (we want it not to be able to sleep)
 	can_sleep = true
 	
 	

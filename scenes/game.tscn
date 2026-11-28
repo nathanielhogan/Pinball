@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://cu2xvj31cb2sl" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://d3gyjgy056oqt" path="res://scenes/baller.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://0ui7cqb7p84e" path="res://scenes/flippers.tscn" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://eo18i03tdb24" path="res://scenes/spring.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://eo18i03tdb24" path="res://scenes/launcher.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bjht37a66g358" path="res://scenes/killzone.tscn" id="5_iywne"]
-[ext_resource type="Script" uid="uid://bydkjdg8atsjt" path="res://scripts/bumperSprings.gd" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://d0spqndgbocwk" path="res://scenes/slingshot.tscn" id="6_p57ef"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dr77u"]
 
@@ -33,17 +33,11 @@ b = Vector2(24, 92)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
 size = Vector2(134, 22)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p57ef"]
-size = Vector2(35, 6)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
-size = Vector2(35, 0.5)
-
 [node name="Game" type="Node2D" unique_id=1324476600]
 script = ExtResource("1_lnu2h")
 
 [node name="Baller" parent="." unique_id=616429539 instance=ExtResource("1_uwrxv")]
-position = Vector2(460, 585.045)
+position = Vector2(460, 505.045)
 
 [node name="Walls" type="Node" parent="." unique_id=1916382964]
 
@@ -102,7 +96,7 @@ rotation = 3.1415927
 shape = SubResource("WorldBoundaryShape2D_lq6r6")
 
 [node name="Launcher" parent="." unique_id=1284311169 node_paths=PackedStringArray("baller") instance=ExtResource("4_lbhrr")]
-position = Vector2(460, 600)
+position = Vector2(460, 620)
 baller = NodePath("../Baller")
 
 [node name="Flippers" parent="." unique_id=950881015 instance=ExtResource("2_yqjtg")]
@@ -117,56 +111,10 @@ shape = SubResource("RectangleShape2D_iywne")
 
 [node name="Slingshots" type="Node" parent="." unique_id=1364933407]
 
-[node name="Slingshot R" type="Node2D" parent="Slingshots" unique_id=527952927]
-position = Vector2(330, 580)
-rotation = -0.9599311
-scale = Vector2(2.5, 2.5)
-metadata/_edit_group_ = true
-
-[node name="Edges" type="StaticBody2D" parent="Slingshots/Slingshot R" unique_id=679202993]
-position = Vector2(-11.404228, -3.734109)
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slingshots/Slingshot R/Edges" unique_id=21280807]
-position = Vector2(11.404223, 3.7341063)
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_p57ef")
-
-[node name="Spring" type="Area2D" parent="Slingshots/Slingshot R" unique_id=1367783786 node_paths=PackedStringArray("slingshot")]
-position = Vector2(-11.174807, -3.4064403)
-script = ExtResource("6_p57ef")
-slingshot = NodePath("..")
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slingshots/Slingshot R/Spring" unique_id=1291574783]
-position = Vector2(11.175, 0.404)
-scale = Vector2(1.0000001, 1)
-shape = SubResource("RectangleShape2D_u5sy4")
-debug_color = Color(0, 0.64424604, 0.2906971, 0.41960785)
-
-[node name="Slingshot L" type="Node2D" parent="Slingshots" unique_id=765203476]
+[node name="SlingshotL" parent="Slingshots" unique_id=972374712 instance=ExtResource("6_p57ef")]
 position = Vector2(150, 580)
 rotation = 0.9599311
-scale = Vector2(2.5, 2.5)
-metadata/_edit_group_ = true
 
-[node name="Edges" type="StaticBody2D" parent="Slingshots/Slingshot L" unique_id=1841385174]
-position = Vector2(-11.404228, -3.734109)
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slingshots/Slingshot L/Edges" unique_id=642660523]
-position = Vector2(11.404223, 3.7341063)
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_p57ef")
-
-[node name="Spring" type="Area2D" parent="Slingshots/Slingshot L" unique_id=1690911603 node_paths=PackedStringArray("slingshot")]
-position = Vector2(-11.174807, -3.4064403)
-script = ExtResource("6_p57ef")
-slingshot = NodePath("..")
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slingshots/Slingshot L/Spring" unique_id=738892094]
-position = Vector2(11.175, 0.404)
-scale = Vector2(1.0000001, 1)
-shape = SubResource("RectangleShape2D_u5sy4")
-debug_color = Color(0, 0.64424604, 0.2906971, 0.41960785)
+[node name="SlingshotR" parent="Slingshots" unique_id=1834958820 instance=ExtResource("6_p57ef")]
+position = Vector2(330, 580)
+rotation = -0.9599311
