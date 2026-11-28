@@ -16,3 +16,59 @@ first boss is going to be quite hard, maybe takes a few days of failing before
 	you finally are able to beat it (think of it like pokemon progression)
 
 factory aesthetic, guy on a balcony above saying "get back to work"
+
+
+fish people, underwater level:
+
+boss gets protag to go to ocean; "he's my best worker." "when is my raise?" "..."
+fish people have underwater pinball machine (less gravity, max velocity)
+	this unlocks something important for their community if beaten
+	protag might unlock something useful for final level, still doesn't get a raise
+
+each community has a locked pinball machine
+	yours is very very powerful; the company wants to unlock it real bad
+	racism
+	you must surrender the artifact to the ceo
+		perhaps real final boss (first person shooter joke, or you must have shredded your contract beforehand (good/bad endings?))
+
+WHERE AND WHEN IS THIS STORY?
+	modern, imperfect high-fantasy
+		contains racism and socioeconomic disparities
+	"silicon valley", or whatever it is called in this world
+		it's close to different biomes and communities
+
+WHY PINBALL?
+	It should somehow build off of traditional high fantasy.
+	These artifacts are ancient, from the days of adventuring and before. Decades ago, there was a man who was a world-record holder for his pinball skills. Unfortunately, he was also a mastermind in stealing stuff, so he would often steal these ancient artifacts from museums and individuals in planned heists, then would seal the artifacts in different pinball machines using magic so that only he was skilled enough to unlock them and retrieve the artifacts.
+	One day he died in a failed heist; the pinball machines with the stolen artifacts have been returned to the rightful owners. One of the owners was the father of the company's CEO, some rich guy with a family history of being rich and sort of evil. The CEO was too lazy to get good at pinball himself, so he sourced a couple hundred 'employees' to work hard and unlock this pinball machine for him.
+	You are one of these 'employees'. The hours are long and the pay is not good. You love pinball but regret having signed that contract. So, you do what you must: train hard at pinball and unlock the CEO's pinball machine. Not only would you become the best pinball player in the world, but you would win your agency back.
+	Once you win, if your employment contract is still intact, you must surrender the artifact to the evil CEO. If you managed to loophole your way out, you can use the artifact to defeat the CEO.
+
+WHO WILL HELP?
+	your roommate
+		mr. lore, and can help you with shredding your contract
+	the communities of the different pinball machines you unlock
+		maybe they give upgrades or help like larger flippers or more lives
+		fish people: larger flippers (makes sense, right?)
+		druids (foresty, super traditional, start of hippie movement dorks): potion of animal speaking recipe
+	Caw the crow, a silly little bird who visits you occasionally
+		Caw will help you in the story, and gives you an extra life in pinball
+		tells other communities about your great pinball skills, unlocking those quests
+			in return, you feed Caw and be a friend
+		the potion will allow more story help and more effects in pinball (dare I say double-jump?)
+
+WHAT OBSTACLES ARE THERE TO OVERCOME?
+	
+
+HOW SHOULD THE GAME FEEL?
+	above all else: playing pinball
+	it will be unique because of the different effects and a story with stakes
+		your contract states you cannot leave the company; you are a slave until this pinball machine is opened
+			you attempted the final machine already and lost (perhaps story level 2), and the contract states you are now a slave because of that
+				story railroading might be bad? idk, but it's exposition that builds stakes that the player actually does
+		the CEO should be a flushed out character we can learn to hate
+		giving up at another community's pinball machine causes them to be sad
+			They prefer paying YOU to try it rather than paying THE COMPANY to unlock it for them, in which the CEO could likely take the artifact for himself
+		the communities know the CEO to be rather evil and power-hungry
+			the CEO might run for president with his powerful artifacts (too much real politics?)
+			or he could thretean these communities because he's racist; the communities need the artifact to stand up for themselves
